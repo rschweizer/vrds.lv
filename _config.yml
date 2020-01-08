@@ -1,0 +1,14 @@
+title: v.r.da.silva
+email: your-email@example.com
+description: >
+  We are getting married!
+date: 08.08.2020
+
+collections:
+  - sections
+
+plugins:
+  - jekyll-seo-tag
+
+sass:
+  style: compressed

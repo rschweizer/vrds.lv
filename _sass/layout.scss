@@ -1,0 +1,285 @@
+h1 {
+  font-family: "Golden Class Script";
+  font-size: 2.5em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  margin: 0.25em 0 0.125em;
+}
+
+h2 {
+  font-family: "Golden Class Serif";
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Golden Class Script";
+  font-size: 1.6666666667em;
+  font-weight: normal;
+  margin: 0.75em 0 0.5em;
+}
+
+h4 {
+  font-family: "Golden Class Script";
+  font-size: 1.3333333333em;
+  font-weight: normal;
+  margin: 0.75em 0 0.5em;
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  background-color: $white;
+  color: $black;
+  font-family: Webnar, $font-family;
+  font-size: 75%;
+  line-height: 1.5;
+  position: relative;
+}
+
+@media (min-width: 60em) {
+  body {
+    font-size: 87.5%;
+  }
+}
+
+@media (min-width: 75em) {
+  body {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 90em) {
+  body {
+    font-size: 112.5%;
+  }
+}
+
+@media (min-width: 105em) {
+  body {
+    font-size: 125%;
+  }
+}
+
+section {
+  position: relative;
+
+  &.error {
+    margin: 5em auto;
+    position: relative;
+    text-align: center;
+    width: 32em;
+  }
+
+  .container {
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2.5em;
+  }
+
+  @media (min-width: 30em) {
+    .container {
+      padding: 2.5em 5em;
+    }
+  }
+
+  @media (min-width: 45em) {
+    .container {
+      padding: 2.5em 0;
+      width: 48em;
+    }
+  }
+}
+
+nav {
+  -webkit-box-pack: center;
+  bottom: 0;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  width: 100%;
+
+  a {
+    -webkit-box-flex: 1;
+    background-color: $mint;
+    box-shadow: 0 0 5px -2px $black;
+    display: block;
+    flex: 1 1 5em;
+    padding: 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $blue;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .icon {
+      height: 2em;
+      line-height: 1;
+      margin: 0 auto;
+      width: 2em;
+
+      svg {
+        display: block;
+      }
+    }
+
+    .title {
+      font-size: 0.75em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+@media (min-width: 30em) {
+  nav {
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    top: 0;
+    width: auto;
+
+    a {
+      -webkit-box-flex: 0;
+      flex: 0 0 auto;
+      padding: 1em 1em;
+      position: relative;
+
+      &:hover {
+        .title {
+          display: block;
+        }
+      }
+
+      .title {
+        -webkit-transform: translateY(-50%);
+        background-color: $gray;
+        box-shadow: 0 0 5px -2px $black;
+        color: $white;
+        display: none;
+        font-size: 1em;
+        left: 100%;
+        line-height: 1;
+        margin-left: 0.5em;
+        margin-top: 0;
+        padding: 0.67em 0.5em 0.5em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+figure {
+  background: radial-gradient(rgba(0, 0, 0, 0.05) 15%, transparent 16%) 0 0,
+    radial-gradient(rgba(0, 0, 0, 0.05) 15%, transparent 16%) 2px 2px,
+    radial-gradient(rgba(240, 255, 250, 0.1) 15%, transparent 20%) 0 2px,
+    radial-gradient(rgba(240, 255, 250, 0.1) 15%, transparent 20%) 2px 3px;
+  background-color: $white;
+  background-size: 4px 4px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 5%;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+figure:before,
+figure:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+figure:before {
+  -webkit-filter: blur(12px);
+  -webkit-transform: skew(-3deg, -3deg) translate(0);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.1) 75%,
+    rgba(0, 0, 0, 0.05) 80%
+  );
+  filter: blur(12px);
+  height: 100%;
+  transform: skew(-3deg, -3deg) translate(0);
+  width: 100%;
+}
+
+figure:after {
+  -webkit-filter: blur(2px);
+  -webkit-transform: skew(1.25deg, 1deg) rotate(1deg) translate(-1px, 8px);
+  background: rgba(0, 0, 0, 0.1);
+  filter: blur(2px);
+  height: 100%;
+  transform: skew(1.25deg, 1deg) rotate(1deg) translate(-1px, 8px);
+  width: 100%;
+}
+
+figure > div {
+  position: relative;
+}
+
+figure > div div.shadow {
+  background: linear-gradient(
+      120deg,
+      rgba(240, 255, 250, 0.1) 0%,
+      rgba(240, 255, 250, 0.25) 33.333%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    linear-gradient(
+      150deg,
+      rgba(240, 255, 250, 0.1) 0%,
+      rgba(240, 255, 250, 0.25) 33.333%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+figure img {
+  border-radius: 2px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+figcaption {
+  overflow: hidden;
+  padding-top: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

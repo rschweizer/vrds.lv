@@ -1,0 +1,27 @@
+#rsvp {
+  margin: 15vw 0;
+
+  .container {
+    color: $white;
+    display: block;
+
+    .bg {
+      -webkit-transform: translateY(-50%) skewY(-7.5deg);
+      background-color: $rose;
+      padding: 6.5825% 0;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) skewY(-7.5deg);
+      width: 100vw;
+      z-index: -1;
+    }
+
+    .rsvp-text {
+      li {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}

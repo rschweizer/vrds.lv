@@ -1,0 +1,168 @@
+#location {
+  margin: 5em 0;
+  padding: 10em 0;
+
+  .container {
+    .bg {
+      -webkit-transform: skewY(-7.5deg);
+      bottom: 0;
+      position: absolute;
+      margin: 6.5825% 0;
+      opacity: 0.25;
+      overflow: hidden;
+      top: 0;
+      transform: skewY(-7.5deg);
+      width: 100vw;
+      z-index: -1;
+
+      .map {
+        -webkit-transform: translateY(-50%) skewY(7.5deg);
+        height: 100%;
+        padding: 6.5825% 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) skewY(7.5deg);
+        width: 100%;
+
+        #map {
+          -webkit-transition: -webkit-filter 500ms ease;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          transition: -webkit-filter 500ms ease;
+          transition: filter 500ms ease;
+          transition: filter 500ms ease, -webkit-filter 500ms ease;
+          width: 100%;
+
+          &.foggy {
+            -webkit-filter: blur(1em);
+            filter: blur(1em);
+          }
+        }
+      }
+    }
+
+    .fg {
+      -webkit-transform: translateY(10%);
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateY(10%);
+      width: 75%;
+
+      #path {
+        fill: none;
+        stroke: $gray;
+        stroke-dasharray: 2, 8, 0, 0;
+        stroke-linecap: round;
+        stroke-width: 1px;
+      }
+
+      #plane {
+        fill: $gray;
+      }
+    }
+
+    @media (min-width: 45em) {
+      .fg {
+        -webkit-transform: translateY(44%);
+        transform: translateY(44%);
+        width: 50%;
+      }
+    }
+
+    .location-form {
+      -webkit-box-flex: 2;
+      flex: 2 1;
+      padding-right: 5%;
+
+      label {
+        text-shadow: 0 0 5px $white;
+        color: $gray;
+        font-size: 0.625em;
+        margin-left: 0.25em;
+        text-transform: uppercase;
+      }
+
+      input {
+        border: none;
+        border-radius: 2px;
+        box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+        display: block;
+        line-height: 1;
+        outline: 0;
+        padding: 0.25em 0.5em 0.125em;
+        font-weight: 700;
+
+        &::-moz-placeholder {
+          font-weight: 400;
+          padding-top: 0.25em;
+        }
+
+        &::-ms-input-placeholder {
+          font-weight: 400;
+          padding-top: 0.25em;
+        }
+
+        &:-ms-input-placeholder {
+          font-weight: 400;
+          padding-top: 0.25em;
+        }
+
+        &::-webkit-input-placeholder {
+          font-weight: 400;
+          padding-top: 0.25em;
+        }
+
+        &::-moz-placeholder {
+          font-weight: 400;
+          padding-top: 0.25em;
+        }
+
+        &::placeholder {
+          font-weight: 400;
+          padding-top: 0.25em;
+        }
+
+        &[type="text"] {
+          margin: 0.125em 0 1em 0;
+          width: 100%;
+        }
+
+        &[type="submit"] {
+          background-color: $gray;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          color: $white;
+          cursor: pointer;
+          margin-top: 1.5em;
+          padding: 1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .location-marker {
+      -webkit-box-flex: 1;
+      -webkit-transform: rotate(10deg);
+      -webkit-transform-origin: center bottom;
+      box-sizing: border-box;
+      flex: 1 2;
+      fill: $red;
+      transform: rotate(10deg);
+      transform-origin: center bottom;
+    }
+
+    @media (min-width: 30em) {
+      .location-marker {
+        padding-left: 2.5em;
+      }
+    }
+
+    @media (min-width: 45em) {
+      .location-marker {
+        padding-right: 2.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{%- assign sections = site.sections | sort: 'position' -%}
+<main>
+  {% for section in sections %}
+  <section id="{{ section.slug }}">
+    <div class="container">
+      {{ section.content }}
+    </div>
+  </section>
+  {% endfor %}
+</main>
+{%- assign links = sections | shift -%} {% include nav.html sections=links %}

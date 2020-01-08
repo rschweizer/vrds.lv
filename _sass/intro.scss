@@ -1,0 +1,38 @@
+#intro {
+  min-height: 100vh;
+
+  .container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding-bottom: 6.5em;
+
+    .bg {
+      -webkit-transform: translateY(-25%) skewY(-7.5deg);
+      background-color: $blue;
+      position: absolute;
+      height: 67vh;
+      left: 0;
+      top: 0;
+      transform: translateY(-25%) skewY(-7.5deg);
+      width: 100vw;
+      z-index: -1;
+    }
+
+    .intro-image {
+      -webkit-box-flex: 1;
+      flex: 1 1 50%;
+      width: 50%;
+
+      &.main {
+        -webkit-transform: translateX(7.5%) translateY(-7.5%) rotate(-7.5deg);
+        transform: translateX(7.5%) translateY(-7.5%) rotate(-7.5deg);
+      }
+
+      &.side {
+        -webkit-transform: translateX(-7.5%) translateY(12.5%) rotate(7.5deg);
+        transform: translateX(-7.5%) translateY(12.5%) rotate(7.5deg);
+        z-index: -1;
+      }
+    }
+  }
+}

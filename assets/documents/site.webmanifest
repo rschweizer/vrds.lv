@@ -1,0 +1,21 @@
+{
+    "name": "v.r.da.silva",
+    "short_name": "v.r.da.silva",
+    "icons": [
+        {
+            "src": "/assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f0fffa",
+    "background_color": "#f0fffa",
+    "start_url": "http://vrds.lv",
+    "display": "standalone",
+    "orientation": "portrait"
+}

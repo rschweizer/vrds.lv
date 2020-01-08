@@ -1,0 +1,26 @@
+#schedule {
+  .container {
+    display: block;
+
+    .schedule-text {
+      margin: 0 auto;
+      text-align: center;
+
+      h3 {
+        margin-top: 3em;
+      }
+    }
+
+    @media (min-width: 30em) {
+      .schedule-text {
+        width: 67%;
+      }
+    }
+
+    @media (min-width: 45em) {
+      .schedule-text {
+        width: 50%;
+      }
+    }
+  }
+}

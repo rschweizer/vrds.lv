@@ -1,0 +1,19 @@
+---
+position: 1
+---
+
+<div class="bg"></div>
+<div class="intro-image main">
+  {%- capture caption -%}
+  <h1>{{ site.title }}</h1>
+  {%- endcapture -%} {% include polaroid.html
+  src='/assets/images/intro/main-720.jpg' alt='Verena and Robert at Glacier
+  Point' caption=caption %}
+</div>
+<div class="intro-image side">
+  {%- capture caption -%}
+  <h4>{{ site.date }}</h4>
+  {%- endcapture -%} {% include polaroid.html
+  src='/assets/images/intro/side-720.jpg' alt='Verena and Robert at Glacier
+  Point' caption=caption %}
+</div>

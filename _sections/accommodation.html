@@ -1,0 +1,123 @@
+---
+title: hotels
+position: 5
+icon: bed
+accommodations:
+  - name: Green Spirit Hotel
+    address: Frankenstraße&nbsp;9e, 93059&nbsp;Regensburg
+    description: >-
+      This hotel is located close to the city center nearby Stadtamhof and 
+      combines a historical building from the 18th century with modern design.
+      Relax in the courtyard and have a cup of coffee in the shade of a 
+      hundred year old acorn tree.
+    image: green-spirit-480.jpg
+    price: 70
+    url: https://www.greenspirithotel.de
+  - name: Hotel Goldenes Kreuz
+    address: Haidplatz&nbsp;7, 93047&nbsp;Regensburg
+    description: >-
+      As former Guest House of visiting Emperors and Princess, Queens and 
+      Duchesses, this hotel overlooks the Haidplatz, one of the most beautiful 
+      locations in downtown Regensburg. The building's Bel Étage, on the second 
+      floor, holds ten indivudally decorated rooms, each with all modern 
+      comforts and conveniences. On the ground floor, The Great Hall was a 
+      meeting place for some of the most powerful and influential rulers of 
+      Europe. Today it houses a beautiful café, whose hospitality and relaxed 
+      atmosphere make it a favorite place for residents, as well as visitors.
+    image: goldenes-kreuz-480.jpg
+    price: 115
+    url: https://www.hotel-goldeneskreuz.com
+  - name: Grand Hotel Orphée
+    address: Untere&nbsp;Bachgasse&nbsp;8, 93047&nbsp;Regensburg
+    description: >-
+      Located just four floors above the same-named restaurant in a lavish 
+      baroque palazzo with antique floor boards, baroque door jambs and 
+      beautiful period stucco ceilings. All our rooms have been furnished most 
+      individually and uniquely with antique furniture, chandeliers, old 
+      wardrobe trunks and four-poster beds. The rooms in the attic offer a 
+      variety of breathtaking vistas over the roofs and towers of Regensburg.
+    image: grand-orphee-480.jpg
+    price: 115
+    url: https://hotel-orphee.de
+  - name: Petit Hotel Orphée
+    address: Untere&nbsp;Bachgasse&nbsp;8, 93047&nbsp;Regensburg
+    description: >-
+      Located just around the corner from the same-named restaurant, where you 
+      pick up your keys, as the hotel does not have a reception desk. 
+      All 15 rooms are furnished in a most individual style: antique wash stands, 
+      turkish tiles; in one of the rooms the bath is hid behind a cabinet door. 
+      This beautiful hotel is like a mirror-image of the town: ever inviting, 
+      familiar with the charm of by-gone days.
+    image: petit-orphee-480.jpg
+    price: 40
+    url: https://hotel-orphee.de
+  - name: Hotel Andreasstadl
+    address: Andreasstraße&nbsp;26, 93059&nbsp;Regensburg
+    description: >-
+      If you wish to get away from the bustle in the center of town yet 
+      nonetheless want to stay in a central location simply take a stroll across 
+      the old stone bridge and visit Stadtamhof north of the river Danube! 
+      The cozy little hotel is only has a total of ten rooms, six of which have 
+      their own patio looking south onto the trees and meadows along the 
+      banks of the Danube. All rooms are furnished Mediterranean style and have 
+      a small kitchenette.
+    image: orphee-andreasstadel-480.jpg
+    price: 115
+    url: https://hotel-orphee.de
+  - name: Bohemian Hotel
+    address: Gesandtenstraße&nbsp;12, 93047&nbsp;Regensburg
+    description: >-
+      This charming hotel is located in a historic building from the 
+      12th century in the heart of the beautiful old town of 
+      Regensburg near all UNESCO World Heritage Sites.
+    image: bohemian-480.jpg
+    price: 110
+    url: https://bohemian-hotel.de
+  - name: Hotel Goliath am Dom
+    address: Goliathstraße&nbsp;10, 93047&nbsp;Regensburg
+    description: >-
+      Styled uniquely with an eye for detail, every room in this hotel features 
+      different color, fabrics and furnishings. Just tell them your favorite 
+      color and experience the style and comfort of this hotel.
+    image: goliath-480.jpg
+    price: 135
+    url: http://www.hotel-goliath.de
+  - name: Hotel am Peterstor
+    address: Fröhliche&nbsp;Türkenstraße&nbsp;12, 93047&nbsp;Regensburg
+    description: >-
+      Located directly in the historical center of Regensburg with a direct 
+      link to the pedestrian zone with its winding cobblestone streets, 
+      this family run hotel is just a few minutes on foot to the 
+      Regensburg Cathedral, the Palace of St. Emmeran, the Stone Bridge and the 
+      main train station. Right next door is the car park on Petersweg, where 
+      you only pay 9€ a day as a guest of the hotel.
+    image: peterstor-480.jpg
+    price: 52
+    url: https://www.hotel-am-peterstor.de
+---
+
+<div class="accommodation-text">
+  <h2>Stay overnight</h2>
+</div>
+<div class="accommodation-list">
+  {% for accommodation in page.accommodations %}
+  <div class="accommodation-item">
+    <div class="accommodation-image">
+      {%- assign alt = accommodation.name | prepend: "Hotel " -%} {%- assign
+      caption=caption -%} {%- assign src = accommodation.image |
+      prepend:"/assets/images/accommodation/" -%} {%- capture caption -%}
+      <h4>{{ accommodation.name }}</h4>
+      {%- endcapture -%} {% include polaroid.html src=src alt=alt
+      caption=caption %}
+    </div>
+    <div class="accommodation-details">
+      <p>{{ accommodation.description | markdownify }}</p>
+      <p class="price">Rooms start at {{ accommodation.price }}€</p>
+      <p class="address">{{ accommodation.address | newline_to_br }}</p>
+      <a href="{{ accommodation.url }}" target="_blank"
+        >{{ accommodation.url }}</a
+      >
+    </div>
+  </div>
+  {% endfor %}
+</div>

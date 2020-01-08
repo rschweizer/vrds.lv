@@ -1,0 +1,8 @@
+<nav id="menu">
+  {% for section in include.sections %}
+  <a href="#{{ section.slug }}">
+    <div class="icon">{% include icons/{{ section.icon | append: ".svg" }} %}</div>
+    <div class="title">{{ section.title }}</div>
+  </a>
+  {% endfor %}
+</nav>

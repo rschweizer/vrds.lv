@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$black: #142b32 !default;
+$white: #f0fffa !default;
+$red: #cc2854 !default;
+$rose: #ffa0aa !default;
+$mint: #ccfff0 !default;
+$blue: #ccf2ff !default;
+$gray: #3d8298 !default;
+
+@import "normalize", "font", "layout", "intro", "about", "rsvp", "schedule",
+  "accommodation", "location";

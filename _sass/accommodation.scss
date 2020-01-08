@@ -1,0 +1,85 @@
+#accommodation {
+  .container {
+    display: block;
+
+    .accommodation-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .accommodation-list {
+      margin-top: 5em;
+
+      .accommodation-item {
+        padding-bottom: 3em;
+
+        &:nth-child(2n) {
+          .accommodation-image {
+            -webkit-transform: rotate(2.5deg);
+            transform: rotate(deg);
+          }
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        .accommodation-image {
+          -webkit-transform: rotate(-2.5deg);
+          margin: 0 auto;
+          transform: rotate(-2.5deg);
+          width: 75%;
+        }
+
+        .accommodation-details {
+          padding-top: 1em;
+
+          .address {
+            font-weight: 700;
+          }
+
+          .price {
+            font-style: italic;
+          }
+        }
+      }
+
+      @media (min-width: 30em) {
+        .accommodation-item {
+          -webkit-box-align: center;
+          -webkit-box-orientation: vertical;
+          align-items: center;
+          display: -webkit-box;
+          display: flex;
+          padding-top: 3em;
+
+          &:nth-child(2n) {
+            -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
+
+            .accommodation-details {
+              padding-right: 2em;
+            }
+          }
+
+          &:first-child {
+            padding-top: 0em;
+          }
+
+          .accommodation-image {
+            -webkit-box-flex: 1;
+            flex: 1 2 33%;
+          }
+
+          .accommodation-details {
+            -webkit-box-flex: 2;
+            box-sizing: border-box;
+            flex: 2 1 67%;
+            padding-left: 2em;
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
